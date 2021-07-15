@@ -43,7 +43,6 @@ public class Tests {
 //	@Story("Story: User able to login successfully")
 //	@Step("Test: Verify COFORGE logo is present")
 //	@Severity(SeverityLevel.TRIVIAL)
-	//RTE
 	public void logoPresence() {
 		boolean logoDisplayed = driver.findElement(By.id("img_ntllogo")).isDisplayed();
 		Assert.assertEquals(logoDisplayed, true);
