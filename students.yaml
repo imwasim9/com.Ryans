@@ -1,0 +1,27 @@
+-Students
+  - name: "John Doe"
+    age: 21
+    major: "Computer Science"
+    gpa: 3.8
+    enrolled_courses:
+    - "Data Structures"
+    - "Algorithms"
+    - "Operating "Systems"
+  - name: Jane Smith
+    age: 22
+    major: Mathematics
+    gpa: 3.9
+    enrolled_courses:
+    - Calculus
+    - Linear Algebra
+    - Statistics
+
+  - name: Emily Johnson
+    age: 20   
+    major: Physics
+    gpa: 3.7
+    enrolled_courses:
+    - Mechanics
+    - Electromagnetism
+    - Quantum Physics
+  

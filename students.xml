@@ -1,0 +1,23 @@
+<Students>
+    <Student>
+        <Name>John Doe</Name>
+        <Age>21</Age>
+        <Major>Computer Science</Major>
+    </Student>
+    <Student>
+        <Name>Jane Smith</Name>
+        <Age>22</Age>
+        <Major>Mathematics</Major>
+    </Student>
+    <Student>
+        <Name>Emily Johnson</Name>
+        <Age>20</Age>
+        <Major>Biology</Major>
+    </Student>  
+    <Student>
+        <Name>Michael Brown</Name>
+        <Age>23</Age>
+        <Major>History</Major> 
+
+    </Student>
+</Students>
