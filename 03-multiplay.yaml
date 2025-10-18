@@ -1,5 +1,5 @@
 - name: "Multi plays and multi tasks play 1"
-  hosts: localhost
+  hosts: local
   tasks: 
   - name: "print message from first play and first task"
     ansible.builtin.debug:
@@ -10,7 +10,7 @@
       msg: "This is the first play and second task"
 
 - name: "Multi plays and multi tasks play 2"
-  hosts: localhost
+  hosts: local
   tasks: 
   - name: "print message from first play and first task"
     ansible.builtin.debug:
