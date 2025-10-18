@@ -14,11 +14,11 @@
   tasks: 
   - name: "print message from first play and first task"
     ansible.builtin.debug:
-      msg: "This is the first play and first task"
+      msg: "This is the second play and first task"
 
   - name: "print another message from first play and second task"
     ansible.builtin.debug:
-      msg: "This is the first play and second task"
+      msg: "This is the second play and second task"
 
 
 
