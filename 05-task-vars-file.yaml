@@ -5,5 +5,8 @@
   tasks:
   - name: display course name
     debug:
-    - msg: "The course name is {{ COURSE }}"
-    - msg: "The trainer name is {{ TRAINER }}"
+     msg: "The course name is {{ COURSE }}"
+   
+  - name: display trainer name
+    debug:
+     msg: "The trainer name is {{ TRAINER }}"
