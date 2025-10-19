@@ -1,7 +1,7 @@
 - name: variables from file
   hosts: local
   vars_files:
-    -course.yaml
+  - course.yaml
   tasks:
     - name: display course name
       debug:
