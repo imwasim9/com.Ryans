@@ -14,3 +14,7 @@
   - name: "print course details"
     ansible.builtin.debug:
      msg: "The {{ Course_name }} course lasts for {{ Duration }} and is conducted by {{ Trainer }}."
+
+  - name: "print username from inventory"
+    ansible.builtin.debug:
+     msg: "The user name is {{ansible_user}}."
