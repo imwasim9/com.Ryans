@@ -1,0 +1,29 @@
+- name: dataTypes
+  hosts: local
+  connection: local
+  vars: 
+    my_string: "This is a string"
+    my_integer: 42
+    my_float: 3.14
+    my_boolean: true
+    my_list_1:
+      - item1
+      - item2
+      - item3
+    my_list_2: ["itemA", "itemB", "itemC"]
+
+    my_dict:
+      key1: value1
+      key2: value2
+      key3: value3
+  tasks:
+  - name: Display dataTypes
+    ansible.builtin.debug:
+      msg: |
+        String: {{ my_string }}
+        Integer: {{ my_integer }}
+        Float: {{ my_float }}
+        Boolean: {{ my_boolean }}
+        List 1: {{ my_list_1 }}
+        List 2: {{ my_list_2 }}
+        Dictionary: {{ my_dict }}

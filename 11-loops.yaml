@@ -1,0 +1,9 @@
+- name: simple loops example
+  hosts: local
+  connection: local
+  gather_facts: no  
+  tasks:
+  - name: Looping over a list of items
+    ansible.builtin.debug:
+      msg: "Item: {{ item }}"
+    loop: ["apple", "banana", "cherry"]

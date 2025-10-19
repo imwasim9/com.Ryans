@@ -1,0 +1,23 @@
+- name: install tools using loops
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: Install git, mysql and zip
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
+    loop:
+      -git
+      -mysql
+      -zip
+
+  tasks:
+  - name: uninstall tools using loops with Dictionary
+    ansible.builtin.packaage:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+      - {name: git, state: absent}
+      - {name: mysql, state: absent}
+      - {name: zip, state: absent}

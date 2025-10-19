@@ -1,0 +1,25 @@
+- name: "condition and gather facts"
+  hosts: local
+  connection: local
+  gather_facts: yes
+  tasks:
+  - name: Display OS information
+    ansible.builtin.debug:
+      msg: "Operating System: {{ ansible_facts['os_family'] }}, Version: {{ ansible_facts['distribution_version'] }}"
+
+  - name: Check if the OS is Ubuntu
+    ansible.builtin.debug:
+      msg: "This is an Ubuntu system."
+    when: ansible_facts['os_family'] == "Debian"
+
+  - name: Check if the OS is RedHat
+    ansible.builtin.debug:
+      msg: "This is a RedHat based system."
+    when: ansible_facts['os_family'] == "RedHat"  
+
+  - name: Check if the number is even or odd
+    vars:
+      number: 7
+    ansible.builtin.debug:
+      msg: "The number {{ number }} is even."
+    when: number % 2 == 0
