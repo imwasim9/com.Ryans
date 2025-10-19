@@ -1,4 +1,4 @@
-- name: Get the variables from prompt or command line
+- name: Get the variables from prompt input and inventory
   hosts: local
   vars_prompt:
   - name: "Course_name"

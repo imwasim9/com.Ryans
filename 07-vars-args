@@ -1,0 +1,6 @@
+- name: "vars from command line arguments"
+  hosts: local
+  tasks:
+  - name: "print course details"
+    ansible.builtin.debug:
+     msg: "The {{ COURSE_NAME }} course lasts for {{ DURATION }} and is conducted by {{ TRAINER }}." 
