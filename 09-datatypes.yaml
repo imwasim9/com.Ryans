@@ -27,3 +27,4 @@
         List 1: {{ my_list_1 }}
         List 2: {{ my_list_2 }}
         Dictionary: {{ my_dict }}
+        "Hello Dude!"

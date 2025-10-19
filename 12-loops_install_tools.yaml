@@ -2,6 +2,7 @@
   hosts: local
   connection: local
   become: yes
+  
   tasks:
   - name: Install git, mysql and zip
     ansible.builtin.package:

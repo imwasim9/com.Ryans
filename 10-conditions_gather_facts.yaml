@@ -10,12 +10,12 @@
   - name: Check if the OS is Ubuntu
     ansible.builtin.debug:
       msg: "This is an Ubuntu system."
-    when: ansible_facts['os_family'] == "Debian"
+    when: ansible_os_family == "Debian"
 
   - name: Check if the OS is RedHat
     ansible.builtin.debug:
       msg: "This is a RedHat based system."
-    when: ansible_facts['os_family'] == "RedHat"  
+    when: ansible_os_family == "RedHat"  
 
   - name: Check if the number is even or odd
     vars:
