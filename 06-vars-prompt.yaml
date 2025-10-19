@@ -1,7 +1,7 @@
 - name: Get the variables from prompt or command line
   hosts: local
   vars_prompt:
-  - name: "Course name"
+  - name: "Course_name"
     prompt: "Enter the course name"
     private: no
   - name: "Duration"
@@ -13,4 +13,4 @@
   tasks:
   - name: "print course details"
     ansible.builtin.debug:
-     msg: "The {{ Course name }} course lasts for {{ Duration }} and is conducted by {{ Trainer }}."
+     msg: "The {{ Course_name }} course lasts for {{ Duration }} and is conducted by {{ Trainer }}."
