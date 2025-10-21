@@ -68,7 +68,8 @@
       msg: "Grep output is : {{ grep_output }}"
 
   - name: redirect the output to a variable
-    ansible.builtin.command: ls -ltr > /tmp/output.txt
+    # ansible.builtin.command: ls -ltr > /tmp/output.txt
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt
     register: command_output
     ignore_errors: yes
 
