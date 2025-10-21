@@ -71,8 +71,8 @@
     # ansible.builtin.command: ls -ltr > /tmp/output.txt
     ansible.builtin.shell: ls -ltr > /tmp/output.txt
     register: command_output
-    ignore_errors: yes
+    # ignore_errors: yes
 
   - name: print command output
     ansible.builtin.debug:
-      msg: "Command output is : {{ command_output.stdout }}"
+      msg: "Command output is : {{ command_output }}"
