@@ -1,0 +1,76 @@
+- name: functions or filters
+  hosts: local
+  connection: local
+  become: yes
+  vars:
+    technologies: "git, mysql, zip"
+
+  names:
+    "name": "Arfan"
+    "age": 2 years 3 months
+
+  namesList:
+    - key: "name"
+      value: "Arfan"  
+    - key: "age"
+      value: "2 years 3 months"
+
+
+  tasks:
+  - name: variables using default function
+    ansible.builtin.debug:
+      msg: "Hello, {{ name | default('wasim') }}"
+
+  - name: variables using split function
+    ansible.builtin.debug:
+      msg: "Installing {{ item }}"
+    loop: "{{ technologies.split(', ') }}"
+
+  - name: convert names map to list
+    ansible.builtin.debug:
+      msg: "namesMapToList are :  {{ names | dict2items }}"
+
+  - name: convert names list to map
+    ansible.builtin.debug:
+      msg: "namesListToMap are :  {{ namesList | items2dict }}"
+
+  - name: read yaml and take it into variable
+    ansible.builtin.set_fact:
+      student_yaml: "{{ lookup('file', 'students.yaml') | from_yaml }}"
+
+  - name: convert yaml to json
+    ansible.builtin.debug:
+      msg: "student in json is : {{ student_yaml | to_json }}"
+
+  - name: save json to a file
+    ansible.builtin.copy:
+      destination: "./student.json"
+      content: "{{ student_yaml | to_nice_json }}"
+  
+  - name: printing name to upper case
+    ansible.builtin.debug:
+      msg: "Name in upper case is : {{ names.name | upper }}"
+
+  - name: printing name to lower case
+    ansible.builtin.debug:
+      msg: "Name in lower case is : {{ names.name | lower }}"
+
+  - name: Check IpAddress is valid or not
+    ansible.builtin.debug:
+      msg: "provided ip is valid or not : {{ 192.168.1.16 | ansible.utils.ipv4 }}"
+
+  - name: grep for root
+    ansible.builtin.shell: "cat /etc/passwd | grep root"
+    register: grep_output
+
+  - name: print grep output
+    ansible.builtin.debug:  
+      msg: "Grep output is : {{ grep_output }}"
+
+  - name: redirect the output to a variable
+    ansible.builtin.command: ls -ltr > /tmp/output.txt
+    register: command_output
+
+  - name: print command output
+    ansible.builtin.debug:
+      msg: "Command output is : {{ command_output.stdout }}"
