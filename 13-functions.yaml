@@ -5,15 +5,15 @@
   vars:
     technologies: "git, mysql, zip"
 
-  names:
-    "name": "Arfan"
-    "age": 2 years 3 months
+    names:
+      "name": "Arfan"
+      "age": 2 years 3 months
 
-  namesList:
-    - key: "name"
-      value: "Arfan"  
-    - key: "age"
-      value: "2 years 3 months"
+    namesList:
+      - key: "name"
+        value: "Arfan"  
+      - key: "age"
+        value: "2 years 3 months"
 
 
   tasks:
