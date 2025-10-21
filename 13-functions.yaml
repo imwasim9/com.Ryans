@@ -44,7 +44,7 @@
 
   - name: save json to a file
     ansible.builtin.copy:
-      destination: "./student.json"
+      dest: "./student.json"
       content: "{{ student_yaml | to_nice_json }}"
   
   - name: printing name to upper case
