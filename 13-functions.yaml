@@ -57,7 +57,7 @@
 
   - name: Check IpAddress is valid or not
     ansible.builtin.debug:
-      msg: "provided ip is valid or not : {{ 192.168.1.16 | ansible.utils.ipv4 }}"
+      msg: "provided ip is valid or not : {{ '192.168.1.16' | ansible.utils.ipv4 }}"
 
   - name: grep for root
     ansible.builtin.shell: "cat /etc/passwd | grep root"
