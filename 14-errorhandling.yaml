@@ -19,3 +19,7 @@
   - name: create user if not exists
     ansible.builtin.command: useradd {{ user_name }}
     when: user_check.rc != 0
+
+  - name: check if user exists or not for second time
+    ansible.builtin.command: id {{ user_name }}
+    register: user_check
