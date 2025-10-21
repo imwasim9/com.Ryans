@@ -1,4 +1,4 @@
--Students
+- Students:
   - name: "John Doe"
     age: 21
     major: "Computer Science"
@@ -6,7 +6,7 @@
     enrolled_courses:
     - "Data Structures"
     - "Algorithms"
-    - "Operating "Systems"
+    - "Operating Systems"
   - name: Jane Smith
     age: 22
     major: Mathematics
