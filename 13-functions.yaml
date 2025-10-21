@@ -17,22 +17,22 @@
 
 
   tasks:
-  - name: variables using default function
-    ansible.builtin.debug:
-      msg: "Hello, {{ name | default('wasim') }}"
+  # - name: variables using default function
+  #   ansible.builtin.debug:
+  #     msg: "Hello, {{ name | default('wasim') }}"
 
-  - name: variables using split function
-    ansible.builtin.debug:
-      msg: "Installing {{ item }}"
-    loop: "{{ technologies.split(', ') }}"
+  # - name: variables using split function
+  #   ansible.builtin.debug:
+  #     msg: "Installing {{ item }}"
+  #   loop: "{{ technologies.split(', ') }}"
 
-  - name: convert names map to list
-    ansible.builtin.debug:
-      msg: "namesMapToList are :  {{ names | dict2items }}"
+  # - name: convert names map to list
+  #   ansible.builtin.debug:
+  #     msg: "namesMapToList are :  {{ names | dict2items }}"
 
-  - name: convert names list to map
-    ansible.builtin.debug:
-      msg: "namesListToMap are :  {{ namesList | items2dict }}"
+  # - name: convert names list to map
+  #   ansible.builtin.debug:
+  #     msg: "namesListToMap are :  {{ namesList | items2dict }}"
 
   - name: read yaml and take it into variable
     ansible.builtin.set_fact:
